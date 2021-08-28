@@ -1,0 +1,16 @@
+﻿@model Layoutview.ViewModels.HomeDetailsViewModel;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.PageTitle = "Employee Details";
+}
+<h3> @Model.PageTitle</h3>
+
+<div>
+    Name: @Model.Employee.Name
+</div>
+<div>
+    Email:@Model.Employee.Name
+</div>
+<div>
+    Department: @Model.Employee.Department
+</div>

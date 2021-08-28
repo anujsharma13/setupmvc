@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+           <a class="navbar-brand " asp-action="index" asp-controller="home">
+               <img src="~/images/employees.png" height="30" width="30"/>
+               </a>  
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                   <li class="nav-item">
+                       <a asp-action="index" asp-controller="home" class="nav-link">List</a>
+
+                   </li>
+                   <li class="nav-item">
+                       <a asp-action="create" asp-controller="home" class="nav-link">List</a>
+
+                   </li>
+               </ul>
+           </div>
+        </nav>
+        <div >
+            @RenderBody()
+        </div>
+        <!----  <script src="~/js/CustomScript.js"></script> reference to javascript file just added by drag and drop-->
+        @if (IsSectionDefined("Scripts"))
+            @RenderSection("Scripts", required: false)
+    </div>  <!---This will add the section with name scripts same as renderbody  to make it optional add 2nd parameter-->
+</body>
+</html>

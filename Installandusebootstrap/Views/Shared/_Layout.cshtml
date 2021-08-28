@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <!----  <script src="~/js/CustomScript.js"></script> reference to javascript file just added by drag and drop-->
+    @if(IsSectionDefined("Scripts"))
+    @RenderSection("Scripts", required: false);  <!---This will add the section with name scripts same as renderbody  to make it optional add 2nd parameter-->
+</body>
+</html>
